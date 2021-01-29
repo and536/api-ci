@@ -117,11 +117,13 @@ nb-configuration.xml
 *.sublime-project
 .phpintel
 /api/
-
-# Visual Studio Code
-.vscode/
+Pela
 
 /results/
 /phpunit*.xml
 /.phpunit.*.cache
+
+/.github
+composer.lock
+env
 
