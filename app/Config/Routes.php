@@ -32,7 +32,11 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('/users', 'Users::index');
+$routes->group('api', function($routes){
+	$routes->post('auth/login', 'Auth::login');
+
+	$routes->resource('users');
+});
 
 /**
  * --------------------------------------------------------------------
